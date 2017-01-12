@@ -1,7 +1,25 @@
-product1 = {"Product_Name" =>"Computer", "Brand" =>"Lenovo", "color"=>"Red", "Price" =>1500}
 
-product2 = {"Product_Name" =>"TV", "Brand" => "Konka", "color"=>"Black", "Price" =>3000}
+class Products 
+attr_reader :product_name, :brand_name, :price 
+attr_writer :price 
 
-product3 = {"Product_Name" => "Refrigirator", "Brand" => "Sumsung", "color" =>"white", "Price" => 1500}
+def initialize(product_hash)
+    @product_name = product_hash[:product_name]
+    @brand_name = product_hash[:brand_name]
+    @price = product_hash[:price]
+  end
 
-puts "The brand for a refrigirator is  #{product3["Brand"]}"
+def info
+     "#{@product_name} #{@brand_name} whose price is #{@price}"
+ end
+
+end 
+product = Products.new ({product_name: "Computer", brand_name: "Lenovo", price: 20000})
+puts product.info
+puts product.product_name 
+puts product.brand_name
+product.price = 25000
+puts product.price
+
+
+
