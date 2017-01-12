@@ -1,5 +1,8 @@
 class Product 
 
+	attr_reader :name, :brand, :price
+	attr_writer :price
+
 	def initialize (product_name, product_brand, product_price)
 		@name = product_name 
 		@brand = product_brand
@@ -7,22 +10,22 @@ class Product
 
 	end 
 
-	def name
-		@name 
-	end 
+	# def name
+	# 	@name 
+	# end 
 
-	def brand 
-		@brand 
-	end 
+	# def brand 
+	# 	@brand 
+	# end 
 
 
-	def price 
-		@price
-	end 
+	# def price 
+	# 	@price
+	# end 
 
-	def price=(product_price)
-		@price = product_price
-	end 
+	# def price=(product_price)
+	# 	@price = product_price
+	# end 
     
   
 end
@@ -32,4 +35,3 @@ puts product.brand
 puts product.name 
 product.price = 5000
 puts product.price 
-
