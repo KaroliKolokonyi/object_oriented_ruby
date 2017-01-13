@@ -1,4 +1,3 @@
-
 class Products 
 attr_reader :product_name, :brand_name, :price 
 attr_writer :price 
@@ -14,12 +13,10 @@ def info
  end
 
 end 
-product = Products.new ({product_name: "Computer", brand_name: "Lenovo", price: 20000})
-puts product.info
-puts product.product_name 
-puts product.brand_name
-product.price = 25000
-puts product.price
+
+
+
+
 
 
 
